@@ -1,0 +1,33 @@
+{
+  "name": "mobazha",
+  "description": "AI skills for Mobazha decentralized commerce: store deployment, onboarding, MCP store management",
+  "version": "0.1.1",
+  "author": {
+    "name": "Mobazha",
+    "url": "https://mobazha.org"
+  },
+  "homepage": "https://github.com/mobazha/mobazha-skills",
+  "repository": "https://github.com/mobazha/mobazha-skills",
+  "license": "MIT",
+  "keywords": [
+    "mobazha",
+    "ecommerce",
+    "decentralized",
+    "self-hosted",
+    "web3",
+    "store",
+    "mcp"
+  ],
+  "mcp": {
+    "servers": {
+      "mobazha-store": {
+        "command": "mobazha-mcp",
+        "args": ["--gateway-url", "${MOBAZHA_GATEWAY_URL}", "--token", "${MOBAZHA_TOKEN}"],
+        "env": {
+          "MOBAZHA_GATEWAY_URL": "http://localhost:5102",
+          "MOBAZHA_TOKEN": ""
+        }
+      }
+    }
+  }
+}
